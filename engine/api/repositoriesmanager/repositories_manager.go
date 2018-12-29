@@ -76,7 +76,7 @@ func GetProjectVCSServer(p *sdk.Project, name string) *sdk.ProjectVCSServer {
 	return nil
 }
 
-// NewVCSServerConsumer returns a sdk.VCSServer wrapping vcs uservices calls
+// NewVCSServerConsumer returns a sdk.VCSServer wrapping vcs µservices calls
 func NewVCSServerConsumer(dbFunc func() *gorp.DbMap, store cache.Store, name string) (sdk.VCSServer, error) {
 	return &vcsConsumer{name: name, dbFunc: dbFunc}, nil
 }
@@ -165,7 +165,7 @@ func (c *localAuthorizedClientCache) Get(repo *sdk.ProjectVCSServer) (sdk.VCSAut
 	return vcs, ok
 }
 
-//AuthorizedClient returns an implementation of AuthorizedClient wrapping calls to vcs uService
+//AuthorizedClient returns an implementation of AuthorizedClient wrapping calls to vcs µService
 func AuthorizedClient(ctx context.Context, db gorp.SqlExecutor, store cache.Store, repo *sdk.ProjectVCSServer) (sdk.VCSAuthorizedClient, error) {
 	if repo == nil {
 		return nil, sdk.ErrNoReposManagerClientAuth

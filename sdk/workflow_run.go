@@ -255,7 +255,7 @@ type WorkflowNodeRun struct {
 	Callback               *WorkflowNodeOutgoingHookRunCallback `json:"callback,omitempty"`
 }
 
-// WorkflowNodeOutgoingHookRunCallback is the callback coming from hooks uservice avec an outgoing hook execution
+// WorkflowNodeOutgoingHookRunCallback is the callback coming from hooks µservice avec an outgoing hook execution
 type WorkflowNodeOutgoingHookRunCallback struct {
 	NodeHookID        int64     `json:"workflow_node_outgoing_hook_id"`
 	Start             time.Time `json:"start"`

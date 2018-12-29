@@ -151,8 +151,8 @@ func processWorkflowRun(ctx context.Context, db gorp.SqlExecutor, store cache.St
 					// Execute the outgoing hooks (asynchronously)
 					for j := range node.OutgoingHooks {
 						// Checks if the hooks as already been executed
-						// If not instanciante trigger a task on "hooks" uService and store the execution UUID
-						// Later the hooks uService will call back the API with the task execution status
+						// If not instanciante trigger a task on "hooks" µService and store the execution UUID
+						// Later the hooks µService will call back the API with the task execution status
 						// This will reprocess all the things
 						h := node.OutgoingHooks[j]
 						var err error

@@ -39,8 +39,8 @@ $ docker-compose logs
 $ docker-compose up --no-recreate cds-migrate
 # You should have this log: "cds_cds-migrate_1 exited with code 0"
 
-# run API and UI
-$ docker-compose up cds-api cds-ui
+# run API, UI and hooks µservices
+$ docker-compose up cds-api cds-ui cds-hooks
 
 ```
 
